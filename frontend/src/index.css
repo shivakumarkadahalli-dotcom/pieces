@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-primary: #E11D48;
+  --brand-primary-foreground: #FFF7F2;
+  --brand-background: #FBF7F2;
+  --brand-foreground: #1F1A17;
+  --brand-accent: #1F1A17;
+  --brand-muted: #F1ECE5;
+  --brand-border: #E5DED2;
+}
+
+html, body, #root { height: 100%; }
+body { font-family: theme('fontFamily.sans'); }
+h1, h2, h3, h4, h5 { font-family: theme('fontFamily.heading'); letter-spacing: -0.01em; }
+
+.btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-medium transition;
+}
+.btn-primary {
+  background: var(--brand-primary);
+  color: var(--brand-primary-foreground);
+}
+.btn-primary:hover { filter: brightness(1.08); }
+.btn-ghost {
+  border: 1px solid var(--brand-border);
+  color: var(--brand-foreground);
+}
+.btn-ghost:hover { background: var(--brand-muted); }
+
+.card {
+  background: var(--brand-muted);
+  border: 1px solid var(--brand-border);
+  border-radius: 18px;
+}
+
+.label-eyebrow {
+  color: var(--brand-accent);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+}
